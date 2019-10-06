@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.23.5",
+    "bootstrap": "^4.3.1",
+    "bootstrap-v4-rtl": "^4.3.1-6",
+    "font-awesome": "^4.7.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "rtl": "^0.1.18"
   },
   "scripts": {
     "start": "react-scripts start",
