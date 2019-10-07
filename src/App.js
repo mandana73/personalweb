@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 import Posts from './components/posts';
+import Footer from './components/footer';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           </main>
         </div>
       </div>
+      <Footer />
     </React.Fragment>;
   }
 }
