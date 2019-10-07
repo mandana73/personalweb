@@ -14,49 +14,47 @@ class Posts extends Component {
     }
 
     render() {
+        const { posts } = this.state;
         return (
-            <div className="container-fluid ">
-                <div className="card shadow-lg bg-light m-2">
-                    <article className="p-3">
-                        <div className="card-header">
-                            <h3 className="card-title">
-                                <a href="#">تست</a>
-                            </h3>
-                            <span className="card-subtitle">
-                                <span className="fa fa-calendar m-2" />
-                                12 مهر
-                            </span>
-                            <img className="card-img"
-                                src="https://fakeimg.pl/800x300/"
-                                alt=""
-                            />
+            <React.Fragment>
+                {posts.map(post => (
+                    <div className="container-fluid ">
+                        <div className="card shadow-lg bg-light m-2">
+                            <article className="p-3">
+                                <div className="card-header">
+                                    <h3 className="card-title">
+                                        <a href="#">{post.postTitle}</a>
+                                    </h3>
+                                    <span className="card-subtitle">
+                                        <span className="fa fa-calendar m-2" />
+                                        {post.postDate}
+                                    </span>
+                                    <img className="card-img"
+                                        src={post.postImageUrl}
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="card-body">
+                                    <p className="card-text">{post.postContent}</p>
+                                </div>
+                                <div className="card-footer">
+                                    <ul className="list-inline float-right">
+                                        <li className="list-inline-item">
+                                            <span className="fa fa-link m-1" />
+                                            برچسب ها:
+                            </li>
+                                        <li className="list-inline-item">
+                                            <a href="#">{post.postTags}</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </article>
                         </div>
-                        <div className="card-body">
-                            <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore eligendi fugit repudiandae nisi. Magni eum tempore hic, placeat nemo illo numquam suscipit! Dolore a consequuntur aspernatur debitis, harum vero?</p>
-                        </div>
-                        <div className="card-footer">
-                            <ul className="list-inline float-right">
-                                <li className="list-inline-item">
-                                    <span className="fa fa-link m-1" />
-                                    برچسب ها:
-                                </li>
-                                <li className="list-inline-item">
-                                    <a href="#">تست</a>
-                                </li>
-                                <li className="list-inline-item">
-                                    <a href="#">تست</a>
-                                </li>
-                                <li className="list-inline-item">
-                                    <a href="#">تست</a>
-                                </li>
-                                <li className="list-inline-item">
-                                    <a href="#">تست</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
+                    </div>
+                ))}
+            </React.Fragment>
         );
     }
 }
